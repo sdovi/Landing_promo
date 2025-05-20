@@ -356,7 +356,10 @@ a {
   line-height: 1.4;
   margin-bottom: 8px;
 }
-
+.package{
+  
+  cursor: pointer;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .packages {
