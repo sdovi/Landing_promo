@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Forum LEVELUP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing">
+<header class="landing__header">
+  <div class="landing__logo">LEVELUP</div>
+
+<button class="burger" aria-label="Открыть меню" onclick="toggleMenu()">
+  <span class="burger__lines"></span>
+  <span class="burger__lines"></span>
+  <span class="burger__lines"></span>
+</button>
+
+
+  <nav class="header__nav">
+    <!-- десктоп-меню -->
+    <ul class="nav__list nav__list--desktop">
+      <li class="nav__item"><a href="#about">О мероприятии</a></li>
+      <li class="nav__item"><a href="#program">Программа</a></li>
+      <li class="nav__item"><a href="#features">Возможности</a></li>
+      <li class="nav__item"><a href="#register">Регистрация</a></li>
+    </ul>
+
+    <!-- мобильное меню -->
+    <ul class="nav__list nav__list--mobile">
+      <li class="nav__item"><a href="#about">О мероприятии</a></li>
+      <li class="nav__item"><a href="#program">Программа</a></li>
+      <li class="nav__item"><a href="#features">Возможности</a></li>
+      <li class="nav__item"><a href="#register">Регистрация</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+  <section class="hero" id="about">
+    <div class="hero__container">
+      <div class="hero__image">
+        <img src="andreas-hero.jpg" alt="Андреас Тиссен" class="hero__speaker-photo">
+        <div class="speaker-card">
+          <div class="speaker-card__tag">Специальный гость</div>
+          <div class="speaker-card__name">Андреас Тиссен</div>
+          <div class="speaker-card__desc">
+            Всемирно известный бизнес-тренер, мастер трансформации и миллионного успеха
+          </div>
+        </div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Business Forum<br>LEVELUP</h1>
+        <p class="hero__tagline">Место, где рождаются лидеры</p>
+        <p class="hero__motto">«Раскрой свой потенциал, взорви свой бизнес!»</p>
+        <p class="hero__description">
+          Это не просто событие, это момент, когда ты решишь стать миллионером!
+        </p>
+        <a href="#register" class="hero__btn">Регистрация</a>
+        <!-- Регистрация: модальное окно -->
+<div class="modal" id="registerModal">
+  <div class="modal__content">
+    <span class="modal__close" onclick="closeModal()">&times;</span>
+    <h3 class="modal__title">Присоединяйся к LEVELUP Forum!</h3>
+    <p class="modal__text">Заполни форму и получи персональное приглашение. Мы свяжемся с тобой в ближайшее время.</p>
+    <form id="registerForm">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" name="phone" placeholder="Номер телефона" required>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<!-- Успех: popup -->
+<div class="popup-success" id="successPopup">
+  <div class="popup-content">
+    <div class="checkmark">✔</div>
+    <p>Спасибо! Мы с вами свяжемся.</p>
+  </div>
+</div>
+
+      </div>
+      <div class="hero__aside">
+        <div class="aside__detail">
+          <span class="detail__date">25–28 июня 2025</span>
+          <span class="detail__city">Дубай</span>
+        </div>
+        <ul class="aside__info-list">
+          <li class="info-list__item">Роскошный 5-звездочный отель</li>
+          <li class="info-list__item">Конференц-центр</li>
+          <li class="info-list__item">
+            100 топ-лидеров и ты — будущий партнёр Alivip Holding!
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+<section class="benefits" id="benefits">
+  <div class="benefits__intro">
+    <div class="benefits__left">
+      <h2 class="benefits__title">Business Forum<br><span>LEVELUP</span></h2>
+    </div>
+    <div class="benefits__right">
+      <p class="benefits__desc">
+        Это твой билет в жизнь мечты, где ты разрушишь все барьеры, построишь мощный бизнес и станешь лидером, меняющим мир!
+      </p>
+    </div>
+  </div>
+
+  <div class="benefits__cards">
+    <div class="benefits__card">
+      <img src="img1.jpg" alt="Карточка 1" class="benefits__image">
+      <p class="benefits__text">
+        Сотри страхи, сомнения и ограничивающие убеждения, чтобы стать лучшей версией себя.
+      </p>
+    </div>
+    <div class="benefits__card">
+      <img src="img2.jpg" alt="Карточка 2" class="benefits__image">
+      <p class="benefits__text">
+        Получи стратегии и инструменты для взрывного роста доходов, продаж и команды.
+      </p>
+    </div>
+    <div class="benefits__card">
+      <img src="img3.jpg" alt="Карточка 3" class="benefits__image">
+      <p class="benefits__text">
+        Стань частью элиты, которая получает доступ к секретам успеха и новым продуктам ALIVIP Holding.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="pricing" id="pricing">
+  <h2 class="pricing__title">Бронируй своё место!</h2>
+  <div class="pricing__packages">
+    <!-- Пакет ECONOMY -->
+    <div class="package">
+      <h3 class="package__title">Пакет<br>Economy</h3>
+      <p class="package__price">500$</p>
+      <hr class="package__divider" />
+      <ul class="package__list">
+        <li>26–27 июня – обучение от Андреас Тиссен</li>
+        <li>Без проживания</li>
+      </ul>
+    </div>
+
+    <!-- Пакет STANDART -->
+    <div class="package">
+      <h3 class="package__title">Пакет<br>Standart</h3>
+      <p class="package__price">1111$</p>
+      <hr class="package__divider" />
+      <ul class="package__list">
+        <li>25 июня – заезд</li>
+        <li>26–27 июня – обучение от Андреас Тиссен</li>
+        <li>Гала-ужин</li>
+        <li>28 июня – выезд</li>
+      </ul>
+    </div>
+
+    <!-- Пакет BUSINESS -->
+    <div class="package">
+      <h3 class="package__title">Пакет<br>Business</h3>
+      <p class="package__price">1555$</p>
+      <hr class="package__divider" />
+      <ul class="package__list">
+        <li>25 июня – заезд</li>
+        <li>26–27 июня – обучение от Андреас Тиссен</li>
+        <li>Гала-ужин</li>
+        <li>28 июня – закрытое обучение</li>
+        <li>29 июня – выезд</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="promo" id="promo">
+  <h2 class="promo__heading">
+    <span>Промоушн для партнёров</span><br>
+    <span class="promo__highlight">Холдинга ALIVIP</span>
+  </h2>
+
+  <div class="promo__cards">
+    <!-- ALIVIP SMART -->
+    <div class="promo-card promo-card--smart">
+      <h3 class="promo-card__title">ALIVIP SMART</h3>
+      <ul class="promo-card__list">
+        <li><strong>1000 ЛЕ</strong> — 1+1 берёт с собой личника</li>
+        <li><strong>500 ЛЕ</strong> — скидка 50%</li>
+        <li><strong>Покупка обучения за 3100 евро</strong> — мероприятие + гала-ужин (без проживания)</li>
+        <li><strong>Первоначальный 35%</strong> взнос за покупку недвижимости Кипра, Алании, Дубая</li>
+      </ul>
+    </div>
+
+    <!-- ALIVIP HEALTH -->
+    <div class="promo-card promo-card--health">
+      <h3 class="promo-card__title">ALIVIP HEALTH</h3>
+      <ul class="promo-card__list">
+        <li>Закрытие ранга Director ALIVIP Health.</li>
+        <li>Статус Senior Director</li>
+        <li>Статус Regional Director</li>
+        <li>С момента регистрации в течение месяца закрытие первой жилищной программы, 15 контрактов по 1770$</li>
+        <li class="promo-card__green">7 личных контрактов по 1770$</li>
+        <li class="promo-card__green">5 личных контрактов по 2150$</li>
+        <li class="promo-card__green">3 личных контракта по 3250$</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="schedule" id="day1">
+  <h2 class="schedule__title">День 1: Личностный прорыв — <br><span>Стань непобедимым!</span></h2>
+  <div class="schedule__date">26 июня 2025</div>
+
+  <div class="schedule__grid">
+    <div class="schedule__block">
+      <div class="schedule__time">10:00 – 10:30</div>
+      <div class="schedule__desc">Зажигающее открытие мероприятия с Андреасом Тиссеном.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">10:30 – 12:00</div>
+      <div class="schedule__desc">Сессия «Сотри ограничивающие убеждения».</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">12:00 – 12:15</div>
+      <div class="schedule__desc">Кофе-брейк для нетворкинга.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">12:15 – 13:30</div>
+      <div class="schedule__desc">Сессия «Непревзойдённая уверенность».</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">13:30 – 14:30</div>
+      <div class="schedule__desc">Роскошный обед с блюдами мировой кухни.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">14:30 – 16:30</div>
+      <div class="schedule__desc">Экстремальные практики — хождение по углям, стеклу и гнутье арматуры.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">16:30 – 16:45</div>
+      <div class="schedule__desc">Кофе-брейк для перезарядки.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">16:45 – 19:00</div>
+      <div class="schedule__desc">Сессия «Лучшая версия себя».</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">20:00 – 22:00</div>
+      <div class="schedule__desc">Совместный ужин с видом на Абу-Даби.</div>
+    </div>
+  </div>
+
+  <p class="schedule__note">
+    Ты выйдешь с этого дня с новой уверенностью, ясным видением и силой преодолевать любые преграды. <br>
+    Это твой первый шаг к миллионам!
+  </p>
+</section>
+
+
+
+
+<section class="schedule" id="day2">
+  <h2 class="schedule__title">День 2: Бизнес-прорыв — <br><span>Миллионы в твоих руках!</span></h2>
+  <div class="schedule__date">27 июня 2025</div>
+
+  <div class="schedule__grid">
+    <div class="schedule__block">
+      <div class="schedule__time">10:00 – 11:30</div>
+      <div class="schedule__desc">Сессия «Стратегия сетевого бизнеса»</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">11:30 – 11:45</div>
+      <div class="schedule__desc">Кофе-брейк для обмена идеями.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">11:45 – 13:15</div>
+      <div class="schedule__desc">Сверхъестественный мастермайнд.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">13:15 – 14:15</div>
+      <div class="schedule__desc">Изысканный обед для нетворкинга.</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">14:15 – 16:00</div>
+      <div class="schedule__desc">Сессия «Масштабирование команды»</div>
+    </div>
+    <div class="schedule__block">
+      <div class="schedule__time">20:00 – 23:00</div>
+      <div class="schedule__desc">Гала-ужин — ночь триумфа! Награждение лучших из лучших!</div>
+    </div>
+  </div>
+
+  <p class="schedule__note">
+    В этот день ты получишь чёткий план для масштабирования бизнеса, инструменты для лидерства и вдохновение от новых возможностей ALIVIP Holding.
+  </p>
+</section>
+
+
+
+<section class="join" id="join">
+  <div class="join__content">
+    <h2 class="join__title">
+      <span class="join__highlight">Как стать частью</span><br>
+      LEVELUP <span class="join__subtitle">Business Forum</span>
+    </h2>
+    <ul class="join__list">
+      <li>
+        <span class="check">✔</span>
+        Зарегистрируйся прямо сейчас — места ограничены, только 100 участников!
+      </li>
+      <li>
+        <span class="check">✔</span>
+        Стань партнёром Alivip Holding и открой доступ к эксклюзивным возможностям.
+      </li>
+      <li>
+        <span class="check">✔</span>
+        Готовься к трансформации — твой бизнес и жизнь никогда не будут прежними!
+      </li>
+    </ul>
+  </div>
+  <div class="join__side">
+    <div class="join__phone">
+      <span class="join__phone-label">Свяжитесь с нами:</span><br>
+      <a href="tel:+905525393415">+90 552 539 34 15</a>
+    </div>
+    <img src="qr.png" alt="QR-код для регистрации" class="join__qr">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="landing__footer">
+    <p>© 2025 LEVELUP. Все права защищены.</p>
+  </footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.header__nav').classList.toggle('open');
+  }
+</script>
+<script>
+  const modal = document.getElementById("registerModal");
+  const popup = document.getElementById("successPopup");
+
+  document.querySelector(".hero__btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  document.getElementById("registerForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const name = this.name.value.trim();
+    const phone = this.phone.value.trim();
+
+    const text = `📝 Новая заявка на регистрацию:\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+    const token = '7318091039:AAGojOrjI0nEdYlJ3CDgHpB9Sv9j3R8jnVQ';
+    const chat_id = '-4628808100';
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    try {
+      await fetch(url, {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ chat_id, text })
+      });
+
+      modal.style.display = "none";
+      popup.style.display = "flex";
+      setTimeout(() => popup.style.display = "none", 4000);
+    } catch (err) {
+      alert("Ошибка отправки. Попробуйте позже.");
+    }
+  });
+
+  window.onclick = function (e) {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+</body>
+</html>
