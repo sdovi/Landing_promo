@@ -7,6 +7,11 @@ body.landing {
   color: #E0C292;
   background-color: #002C5F;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -21,9 +26,10 @@ a {
   padding: 20px 30px;
   background: #002C5F;
 }
-.landing__logo {
+.landing__logo img {
   font-size: 24px;
   font-weight: 700;
+  width: 90px !important;
   color: #E0C292;
 }
 
@@ -369,6 +375,30 @@ a {
   .package-card {
     max-width: 100%;
   }
+  
+/* Hero aside */
+.hero__aside {
+  padding: 15px 5px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 150px !important;
+}
+.hero__aside {
+
+  background-color: rgba(255, 255, 255, 0);
+
+}
+
+.benefits__desc {
+  font-size: 15px !important;
+  color: #ffffff !important;
+  font-weight: 500;
+  max-width: 250px !important;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin: 0px !important;
+}
 }
 
 
@@ -601,6 +631,11 @@ a {
   .schedule__block {
     padding: 14px;
   }
+  
+  
+.hero {
+  padding:30px 10px !important;
+}
 }
 
 
@@ -1084,9 +1119,194 @@ a {
 
 
 
+/* === JOIN Section === */
+.join {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #001b3a, #000);
+  color: #E0C292;
+  gap: 40px;
+  box-sizing: border-box;
+}
+.join__content {
+  flex: 1;
+  min-width: 260px;
+  max-width: 600px;
+}
+.join__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.join__highlight {
+  color: #FF3030;
+  font-size: 24px;
+}
+.join__subtitle {
+  font-size: 22px;
+  font-weight: 500;
+}
+.join__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.join__list li {
+  font-size: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.join__list .check {
+  color: #FFD700;
+  margin-right: 10px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.join__side {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.join__phone {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(224,194,146,0.3);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+}
+.join__phone-label {
+  font-weight: 600;
+  color: #E0C292;
+  font-size: 14px;
+}
+.join__qr {
+  max-width: 180px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .join {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .join__content,
+  .join__side {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .join__list li {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .join__title {
+    font-size: 26px;
+  }
+}
 
 
 
+/* === Pricing Section === */
+.pricing {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #001c3d, #000);
+  color: #E0C292;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pricing__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.pricing__packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.package {
+  background-color: transparent;
+  border: 2px solid #E0C292;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 300px;
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.package__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.package__price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FF3030;
+  margin-bottom: 16px;
+}
+.package__divider {
+  border: none;
+  border-top: 1px solid rgba(224, 194, 146, 0.3);
+  margin: 16px auto;
+  width: 80%;
+}
+.package__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #E0C292;
+}
+.package__list li + li {
+  margin-top: 10px;
+}
+
+/* ✅ Адаптация для телефонов */
+@media (max-width: 768px) {
+  .pricing {
+    padding: 60px 16px;
+  }
+
+  .pricing__title {
+    font-size: 28px;
+  }
+
+  .pricing__packages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 
 
